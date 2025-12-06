@@ -63,7 +63,8 @@ abstract class AbstractEnchantmentMachine extends AContainer {
 
     protected void showEnchantmentLevelWarning(@Nonnull BlockMenu menu) {
         if (!useLevelLimit.getValue()) {
-            throw new IllegalStateException("Auto Enchantment/Disenchantment Machine level limit is not enabled, cannot display warning message.");
+            throw new IllegalStateException(
+                    "Auto Enchantment/Disenchantment Machine level limit is not enabled, cannot display warning message.");
         }
 
         String notice = ChatColors.color(Slimefun.getLocalization().getMessage("messages.above-limit-level"));
@@ -74,7 +75,8 @@ abstract class AbstractEnchantmentMachine extends AContainer {
 
     protected void showEnchantmentLimitWarning(@Nonnull BlockMenu menu) {
         if (!useEnchantLimit.getValue()) {
-            throw new IllegalStateException("Auto Enchantment/Disenchantment Machine enchantment count limit is not enabled, cannot display warning message.");
+            throw new IllegalStateException(
+                    "Auto Enchantment/Disenchantment Machine enchantment count limit is not enabled, cannot display warning message.");
         }
 
         String notice = ChatColors.color(Slimefun.getLocalization().getMessage("messages.above-enchant-limit"));

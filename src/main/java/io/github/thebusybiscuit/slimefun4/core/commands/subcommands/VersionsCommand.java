@@ -94,10 +94,12 @@ class VersionsCommand extends SubCommand {
             // Declare that we are NOT OFFICIAL build so no support from upstream
             builder.append(Component.text("\nTranslated by StarWishsama", Style.style(NamedTextColor.WHITE)))
                     .append(Component.text(
-                            "\nPlease do not screenshot this version info to Discord/Github for bug reports\nPlease report to the translation page first\n", Style.style(NamedTextColor.RED)));
+                            "\nPlease do not screenshot this version info to Discord/Github for bug reports\nPlease report to the translation page first\n",
+                            Style.style(NamedTextColor.RED)));
 
             if (Slimefun.getConfigManager().isBypassEnvironmentCheck()) {
-                builder.append(Component.text("\n\nEnvironment compatibility check disabled", Style.style(NamedTextColor.RED)));
+                builder.append(Component.text(
+                        "\n\nEnvironment compatibility check disabled", Style.style(NamedTextColor.RED)));
             }
 
             if (Slimefun.getConfigManager().isBypassItemLengthCheck()) {
@@ -136,7 +138,8 @@ class VersionsCommand extends SubCommand {
         Collection<Plugin> addons = Slimefun.getInstalledAddons();
 
         if (addons.isEmpty()) {
-            builder.append(Component.text("No addons installed", NamedTextColor.GRAY).decorate(TextDecoration.ITALIC));
+            builder.append(
+                    Component.text("No addons installed", NamedTextColor.GRAY).decorate(TextDecoration.ITALIC));
             return;
         }
 
@@ -175,7 +178,8 @@ class VersionsCommand extends SubCommand {
                         Component hoverComp = Component.text()
                                 .append(Component.text("Author: ", NamedTextColor.YELLOW))
                                 .append(Component.text(authors, NamedTextColor.YELLOW))
-                                .append(Component.text("\n> Feedback link provided by addon is invalid!", NamedTextColor.RED))
+                                .append(Component.text(
+                                        "\n> Feedback link provided by addon is invalid!", NamedTextColor.RED))
                                 .build();
 
                         hoverEvent = HoverEvent.showText(hoverComp);
@@ -201,21 +205,27 @@ class VersionsCommand extends SubCommand {
                             clickEvent = ClickEvent.openUrl(uri.toString());
                         }
                         Component hoverComp = Component.text()
-                                .append(Component.text("This plugin has been disabled.\nPlease check the console for errors.", NamedTextColor.RED))
+                                .append(Component.text(
+                                        "This plugin has been disabled.\nPlease check the console for errors.",
+                                        NamedTextColor.RED))
                                 .append(Component.text("\n> Click to open feedback page", NamedTextColor.DARK_RED))
                                 .build();
 
                         hoverEvent = HoverEvent.showText(hoverComp);
                     } catch (IllegalArgumentException e) {
                         Component hoverComp = Component.text()
-                                .append(Component.text("This plugin has been disabled.\nPlease check the console for errors.", NamedTextColor.RED))
-                                .append(Component.text("\n> Feedback link provided by plugin is invalid", NamedTextColor.DARK_RED))
+                                .append(Component.text(
+                                        "This plugin has been disabled.\nPlease check the console for errors.",
+                                        NamedTextColor.RED))
+                                .append(Component.text(
+                                        "\n> Feedback link provided by plugin is invalid", NamedTextColor.DARK_RED))
                                 .build();
 
                         hoverEvent = HoverEvent.showText(hoverComp);
                     }
                 } else {
-                    Component hoverComp = Component.text("Plugin has been disabled, please check the console for errors.");
+                    Component hoverComp =
+                            Component.text("Plugin has been disabled, please check the console for errors.");
                     hoverEvent = HoverEvent.showText(hoverComp);
                 }
             }

@@ -197,7 +197,14 @@ public abstract class Reactor extends AbstractEnergyProvider
 
         if (port != null) {
             menu.replaceExistingItem(
-                    INFO_SLOT, new CustomItemStack(Material.GREEN_WOOL, "&7Access Port", "", "&6Connected", "", "&7> Click to view access port"));
+                    INFO_SLOT,
+                    new CustomItemStack(
+                            Material.GREEN_WOOL,
+                            "&7Access Port",
+                            "",
+                            "&6Connected",
+                            "",
+                            "&7> Click to view access port"));
             menu.addMenuClickHandler(INFO_SLOT, (p, slot, item, action) -> {
                 port.open(p);
                 updateInventory(menu, b);
@@ -207,7 +214,14 @@ public abstract class Reactor extends AbstractEnergyProvider
         } else {
             menu.replaceExistingItem(
                     INFO_SLOT,
-                    new CustomItemStack(Material.RED_WOOL, "&7Access Port", "", "&cNot Connected", "", "&7The port must be placed", "&73 blocks above the reactor!"));
+                    new CustomItemStack(
+                            Material.RED_WOOL,
+                            "&7Access Port",
+                            "",
+                            "&cNot Connected",
+                            "",
+                            "&7The port must be placed",
+                            "&73 blocks above the reactor!"));
             menu.addMenuClickHandler(INFO_SLOT, (p, slot, item, action) -> {
                 updateInventory(menu, b);
                 menu.open(p);
@@ -241,7 +255,12 @@ public abstract class Reactor extends AbstractEnergyProvider
         if (this instanceof NuclearReactor) {
             preset.addItem(
                     1,
-                    new CustomItemStack(getFuelIcon(), "&7Fuel", "", "&fYou can place radioactive fuel here:", "&2Uranium &for &aNeptunium"),
+                    new CustomItemStack(
+                            getFuelIcon(),
+                            "&7Fuel",
+                            "",
+                            "&fYou can place radioactive fuel here:",
+                            "&2Uranium &for &aNeptunium"),
                     ChestMenuUtils.getEmptyClickHandler());
         } else if (this instanceof NetherStarReactor) {
             preset.addItem(
@@ -251,7 +270,12 @@ public abstract class Reactor extends AbstractEnergyProvider
         } else {
             preset.addItem(
                     1,
-                    new CustomItemStack(getFuelIcon(), "&7Fuel", "", "&fYou can place radioactive fuel here:", "&2Uranium &for &aNeptunium"),
+                    new CustomItemStack(
+                            getFuelIcon(),
+                            "&7Fuel",
+                            "",
+                            "&fYou can place radioactive fuel here:",
+                            "&2Uranium &for &aNeptunium"),
                     ChestMenuUtils.getEmptyClickHandler());
         }
 
@@ -264,13 +288,22 @@ public abstract class Reactor extends AbstractEnergyProvider
 
         if (needsCooling()) {
             preset.addItem(
-                    7, new CustomItemStack(getCoolant(), "&bCoolant", "", "&fPlace coolant here", "&4Without coolant, your reactor", "&4will explode instantly"));
+                    7,
+                    new CustomItemStack(
+                            getCoolant(),
+                            "&bCoolant",
+                            "",
+                            "&fPlace coolant here",
+                            "&4Without coolant, your reactor",
+                            "&4will explode instantly"));
         } else {
             preset.addItem(7, new CustomItemStack(Material.BARRIER, "&bCoolant", "", "&fPlace coolant here"));
 
             for (int i : border_4) {
                 preset.addItem(
-                        i, new CustomItemStack(Material.BARRIER, "&cNo Coolant Required"), ChestMenuUtils.getEmptyClickHandler());
+                        i,
+                        new CustomItemStack(Material.BARRIER, "&cNo Coolant Required"),
+                        ChestMenuUtils.getEmptyClickHandler());
             }
         }
     }

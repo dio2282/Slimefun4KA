@@ -28,7 +28,11 @@ public class VersionedMiddleClickListener implements Listener {
             getBlockMethod.setAccessible(true);
             plugin.getServer().getPluginManager().registerEvents(this, plugin);
         } catch (Throwable e) {
-            Slimefun.logger().log(Level.WARNING, "Unable to initialize middle-click listener version compatibility module, some features may not work properly", e);
+            Slimefun.logger()
+                    .log(
+                            Level.WARNING,
+                            "Unable to initialize middle-click listener version compatibility module, some features may not work properly",
+                            e);
         }
     }
 

@@ -327,7 +327,9 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
             Slimefun.logger().warning("Please use /sf migrate confirm to migrate after the server finishes loading!");
             Slimefun.logger().warning("If you don't migrate, you will lose data from previous versions!!!");
             Slimefun.logger().warning("\n");
-            Slimefun.logger().warning("Users who need to use MySQL database, please modify two config files after shutting down the server");
+            Slimefun.logger()
+                    .warning(
+                            "Users who need to use MySQL database, please modify two config files after shutting down the server");
             Slimefun.logger().warning("block-storage.yml and profile-storage.yml");
             Slimefun.logger().warning("\n");
             Slimefun.logger().warning("====================================================");
@@ -346,7 +348,10 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
 
         // Make sure that the network size is a valid input
         if (networkSize < 1) {
-            logger.log(Level.WARNING, "'networks.max-size' size is set incorrectly! It must be greater than 1, but you set: {0}", networkSize);
+            logger.log(
+                    Level.WARNING,
+                    "'networks.max-size' size is set incorrectly! It must be greater than 1, but you set: {0}",
+                    networkSize);
             networkSize = 1;
         }
 
@@ -605,7 +610,11 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
                         getLogger(), version, getDescription().getVersion());
                 return true;
             } else {
-                getLogger().log(Level.WARNING, "We cannot identify the Minecraft version you are using (1.{0}.x)", version);
+                getLogger()
+                        .log(
+                                Level.WARNING,
+                                "We cannot identify the Minecraft version you are using (1.{0}.x)",
+                                version);
 
                 /*
                  * If we are unsure about it, we will assume "supported".

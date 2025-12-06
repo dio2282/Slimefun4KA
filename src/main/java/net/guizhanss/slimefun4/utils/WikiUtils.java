@@ -64,9 +64,12 @@ public final class WikiUtils {
             }
 
             plugin.getLogger()
-                    .log(Level.INFO, MessageFormat.format("Loaded Wiki pages for {1} items from {0}", plugin.getName(), count));
+                    .log(
+                            Level.INFO,
+                            MessageFormat.format("Loaded Wiki pages for {1} items from {0}", plugin.getName(), count));
         } catch (Exception e) {
-            plugin.getLogger().log(Level.SEVERE, MessageFormat.format("Unable to load wiki.json from {0}", plugin.getName()), e);
+            plugin.getLogger()
+                    .log(Level.SEVERE, MessageFormat.format("Unable to load wiki.json from {0}", plugin.getName()), e);
         }
     }
 }

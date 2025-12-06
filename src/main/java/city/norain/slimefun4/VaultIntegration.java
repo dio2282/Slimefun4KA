@@ -22,10 +22,16 @@ public class VaultIntegration {
                 econ = rsp.getProvider();
                 plugin.getLogger().log(Level.INFO, "Successfully connected to Vault");
             } else {
-                plugin.getLogger().log(Level.WARNING, "Unable to connect to Vault. If you are a CMI user, please enable the economy system in the config file");
+                plugin.getLogger()
+                        .log(
+                                Level.WARNING,
+                                "Unable to connect to Vault. If you are a CMI user, please enable the economy system in the config file");
             }
         } else {
-            plugin.getLogger().log(Level.WARNING, "Vault is not installed on the server, the money unlock research feature will be unavailable");
+            plugin.getLogger()
+                    .log(
+                            Level.WARNING,
+                            "Vault is not installed on the server, the money unlock research feature will be unavailable");
         }
     }
 

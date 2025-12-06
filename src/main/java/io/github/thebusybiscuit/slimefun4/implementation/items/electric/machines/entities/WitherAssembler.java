@@ -65,10 +65,17 @@ public class WitherAssembler extends AbstractEntityAssembler<Wither> {
                 new CustomItemStack(getHead(), "&7Wither Skeleton Skull", "", "&fPlace wither skeleton skulls here"),
                 ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
-                7, new CustomItemStack(getBody(), "&7Soul Sand", "", "&fPlace soul sand here"), ChestMenuUtils.getEmptyClickHandler());
+                7,
+                new CustomItemStack(getBody(), "&7Soul Sand", "", "&fPlace soul sand here"),
+                ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
                 13,
-                new CustomItemStack(Material.CLOCK, "&7Cooldown: &b30 seconds", "", "&fThis machine takes half a minute to assemble", "&fSo please be patient!"),
+                new CustomItemStack(
+                        Material.CLOCK,
+                        "&7Cooldown: &b30 seconds",
+                        "",
+                        "&fThis machine takes half a minute to assemble",
+                        "&fSo please be patient!"),
                 ChestMenuUtils.getEmptyClickHandler());
     }
 

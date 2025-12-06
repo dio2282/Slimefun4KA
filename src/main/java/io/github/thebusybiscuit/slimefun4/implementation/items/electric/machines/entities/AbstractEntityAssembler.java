@@ -160,14 +160,18 @@ public abstract class AbstractEntityAssembler<T extends Entity> extends SimpleSl
         var blockData = StorageCacheUtils.getBlock(b.getLocation());
         String val;
         if (blockData == null || (val = blockData.getData(KEY_ENABLED)) == null || val.equals(String.valueOf(false))) {
-            menu.replaceExistingItem(22, new CustomItemStack(Material.GUNPOWDER, "&7Enabled: &4\u2718", "", "&e> Click to enable machine"));
+            menu.replaceExistingItem(
+                    22,
+                    new CustomItemStack(Material.GUNPOWDER, "&7Enabled: &4\u2718", "", "&e> Click to enable machine"));
             menu.addMenuClickHandler(22, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), KEY_ENABLED, String.valueOf(true));
                 updateBlockInventory(menu, b);
                 return false;
             });
         } else {
-            menu.replaceExistingItem(22, new CustomItemStack(Material.REDSTONE, "&7Enabled: &2\u2714", "", "&e> Click to disable machine"));
+            menu.replaceExistingItem(
+                    22,
+                    new CustomItemStack(Material.REDSTONE, "&7Enabled: &2\u2714", "", "&e> Click to disable machine"));
             menu.addMenuClickHandler(22, (p, slot, item, action) -> {
                 StorageCacheUtils.setData(b.getLocation(), KEY_ENABLED, String.valueOf(false));
                 updateBlockInventory(menu, b);
@@ -182,7 +186,11 @@ public abstract class AbstractEntityAssembler<T extends Entity> extends SimpleSl
         menu.replaceExistingItem(
                 31,
                 new CustomItemStack(
-                        Material.PISTON, "&7Spawn Height: &3" + offset + " blocks", "", "&fLeft-Click: &7+0.1", "&fRight-Click: &7-0.1"));
+                        Material.PISTON,
+                        "&7Spawn Height: &3" + offset + " blocks",
+                        "",
+                        "&fLeft-Click: &7+0.1",
+                        "&fRight-Click: &7-0.1"));
         menu.addMenuClickHandler(31, (p, slot, item, action) -> {
             double offsetv =
                     NumberUtils.reparseDouble(Double.parseDouble(StorageCacheUtils.getData(b.getLocation(), KEY_OFFSET))
@@ -294,15 +302,28 @@ public abstract class AbstractEntityAssembler<T extends Entity> extends SimpleSl
     protected void constructMenu(BlockMenuPreset preset) {
         preset.addItem(
                 1,
-                new CustomItemStack(getHead(), "&7Place Head Here", "", "&fYou can place items here that will be used as the entity's head"),
+                new CustomItemStack(
+                        getHead(),
+                        "&7Place Head Here",
+                        "",
+                        "&fYou can place items here that will be used as the entity's head"),
                 ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
                 7,
-                new CustomItemStack(getBody(), "&7Place Assembly Material Here", "", "&fYou can place items here that will be used as the entity's body"),
+                new CustomItemStack(
+                        getBody(),
+                        "&7Place Assembly Material Here",
+                        "",
+                        "&fYou can place items here that will be used as the entity's body"),
                 ChestMenuUtils.getEmptyClickHandler());
         preset.addItem(
                 13,
-                new CustomItemStack(Material.CLOCK, "&7Cooldown: &b30 seconds", "", "&fThis machine takes half a minute to assemble", "&fSo please be patient!"),
+                new CustomItemStack(
+                        Material.CLOCK,
+                        "&7Cooldown: &b30 seconds",
+                        "",
+                        "&fThis machine takes half a minute to assemble",
+                        "&fSo please be patient!"),
                 ChestMenuUtils.getEmptyClickHandler());
     }
 
