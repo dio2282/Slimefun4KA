@@ -32,8 +32,9 @@ public class DataUtils {
             if (!Slimefun.getConfigManager().isBypassItemLengthCheck()
                     && Slimefun.getDatabaseManager().getBlockDataStorageType() != StorageType.SQLITE
                     && itemStr.length() > 65535) {
-                throw new IllegalArgumentException("Detected oversized item, please contact the corresponding plugin developer to resolve: " + StringUtil.itemStackToString(itemStack)
-                        + ", size = " + itemStr.length());
+                throw new IllegalArgumentException(
+                        "Detected oversized item, please contact the corresponding plugin developer to resolve: "
+                                + StringUtil.itemStackToString(itemStack) + ", size = " + itemStr.length());
             }
 
             return itemStr;
@@ -57,7 +58,10 @@ public class DataUtils {
             Debug.log(TestCase.BACKPACK, "Deserialized itemstack: " + result);
 
             if (result.getType().isAir()) {
-                Slimefun.logger().log(Level.WARNING, "Failed to deserialize item from database! Corresponding item cannot be displayed.");
+                Slimefun.logger()
+                        .log(
+                                Level.WARNING,
+                                "Failed to deserialize item from database! Corresponding item cannot be displayed.");
             }
 
             return result;

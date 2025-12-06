@@ -198,7 +198,8 @@ public class BlockStorageMigrator implements IMigrator {
             try {
                 var w = Bukkit.getWorld(arr[0]);
                 if (w == null) {
-                    Slimefun.logger().log(Level.WARNING, "World where chunk is located is not loaded, ignoring: " + arr[0]);
+                    Slimefun.logger()
+                            .log(Level.WARNING, "World where chunk is located is not loaded, ignoring: " + arr[0]);
                     continue;
                 }
 

@@ -49,7 +49,8 @@ public final class SlimefunExtended {
             sf.getLogger().log(Level.WARNING, "");
             sf.getLogger().log(Level.WARNING, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             sf.getLogger().log(Level.WARNING, "Detected using hybrid server, Slimefun will be disabled!");
-            sf.getLogger().log(Level.WARNING, "Hybrid servers have been reported to have usage issues by multiple users,");
+            sf.getLogger()
+                    .log(Level.WARNING, "Hybrid servers have been reported to have usage issues by multiple users,");
             sf.getLogger().log(Level.WARNING, "Forcing to bypass detection will not receive any support.");
             sf.getLogger().log(Level.WARNING, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             sf.getLogger().log(Level.WARNING, "");
