@@ -28,7 +28,7 @@ public final class SlimefunExtended {
             databaseDebugMode = true;
 
             Slimefun.getSQLProfiler().start();
-            Slimefun.logger().log(Level.INFO, "已启动数据库调试模式");
+            Slimefun.logger().log(Level.INFO, "Database debug mode has been enabled");
         } else {
             Configurator.setLevel(HikariConfig.class.getName(), org.apache.logging.log4j.Level.OFF);
             Configurator.setLevel(HikariDataSource.class.getName(), org.apache.logging.log4j.Level.OFF);
@@ -40,7 +40,7 @@ public final class SlimefunExtended {
         try {
             minecraftVersion = MinecraftVersion.of(sf.getServer());
         } catch (UnknownServerVersionException e) {
-            sf.getLogger().log(Level.WARNING, "无法识别你正在使用的服务端版本 :(");
+            sf.getLogger().log(Level.WARNING, "Unable to identify the server version you are using :(");
             return false;
         }
 
@@ -48,9 +48,9 @@ public final class SlimefunExtended {
             sf.getLogger().log(Level.WARNING, "#######################################################");
             sf.getLogger().log(Level.WARNING, "");
             sf.getLogger().log(Level.WARNING, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            sf.getLogger().log(Level.WARNING, "检测到正在使用混合端, Slimefun 将会被禁用!");
-            sf.getLogger().log(Level.WARNING, "混合端已被多个用户报告有使用问题,");
-            sf.getLogger().log(Level.WARNING, "强制绕过检测将不受任何反馈支持.");
+            sf.getLogger().log(Level.WARNING, "Detected using hybrid server, Slimefun will be disabled!");
+            sf.getLogger().log(Level.WARNING, "Hybrid servers have been reported to have usage issues by multiple users,");
+            sf.getLogger().log(Level.WARNING, "Forcing to bypass detection will not receive any support.");
             sf.getLogger().log(Level.WARNING, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             sf.getLogger().log(Level.WARNING, "");
             sf.getLogger().log(Level.WARNING, "#######################################################");
@@ -61,8 +61,8 @@ public final class SlimefunExtended {
             sf.getLogger().log(Level.WARNING, "#######################################################");
             sf.getLogger().log(Level.WARNING, "");
             sf.getLogger().log(Level.WARNING, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            sf.getLogger().log(Level.WARNING, "检测到你禁用了环境兼容性检查!");
-            sf.getLogger().log(Level.WARNING, "未通过兼容性检查将无法受到反馈支持.");
+            sf.getLogger().log(Level.WARNING, "Detected that you have disabled environment compatibility checks!");
+            sf.getLogger().log(Level.WARNING, "Failing compatibility checks will not receive support.");
             sf.getLogger().log(Level.WARNING, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             sf.getLogger().log(Level.WARNING, "");
             sf.getLogger().log(Level.WARNING, "#######################################################");
