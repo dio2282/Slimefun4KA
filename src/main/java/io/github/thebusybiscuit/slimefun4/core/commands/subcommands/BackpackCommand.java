@@ -142,10 +142,10 @@ class BackpackCommand extends SubCommand {
 
             var visualBackpack = SlimefunItems.RESTORED_BACKPACK.clone();
             var im = visualBackpack.getItemMeta();
-            im.setDisplayName(bp.getName().isEmpty() ? "背包 #" + bp.getId() : bp.getName());
+            im.setDisplayName(bp.getName().isEmpty() ? "Backpack #" + bp.getId() : bp.getName());
             var lore = new ArrayList<String>();
             lore.add("");
-            lore.add(ChatColor.translateAlternateColorCodes('&', "&a左键 获取此背包"));
+            lore.add(ChatColor.translateAlternateColorCodes('&', "&aLeft-Click to get this backpack"));
             im.setLore(lore);
             visualBackpack.setItemMeta(im);
 

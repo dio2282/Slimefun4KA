@@ -372,7 +372,7 @@ public class GEOMiner extends SlimefunItem
         }
 
         if (!success) {
-            updateHologram(b, "&4需要先进行地形扫描!");
+            updateHologram(b, "&4Terrain scan required first!");
             return;
         }
 

@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 /**
- * 该指令可直接对 Slimefun 方块数据进行设置。
+ * This command can directly set Slimefun block data.
  *
  * @author ybw0014
  */
@@ -53,7 +53,7 @@ class BlockDataCommand extends SubCommand {
         var blockData = StorageCacheUtils.getBlock(target.getLocation());
 
         if (target == null || target.getType().isAir() || blockData == null) {
-            ChatUtils.sendMessage(player, "&c你需要看向一个 Slimefun 方块才能执行该指令!");
+            ChatUtils.sendMessage(player, "&cYou need to look at a Slimefun block to execute this command!");
             return;
         }
 
@@ -62,7 +62,7 @@ class BlockDataCommand extends SubCommand {
         switch (args[1]) {
             case "get" -> {
                 String value = blockData.getData(key);
-                ChatUtils.sendMessage(player, "&a该方块 &b%key% &a的值为: &e%value%", msg -> msg.replace("%key%", key)
+                ChatUtils.sendMessage(player, "&aThe value of &b%key% &afor this block is: &e%value%", msg -> msg.replace("%key%", key)
                         .replace("%value%", value == null ? "null" : value));
             }
             case "set" -> {
@@ -77,24 +77,24 @@ class BlockDataCommand extends SubCommand {
                 }
 
                 if (key.equalsIgnoreCase("id")) {
-                    ChatUtils.sendMessage(player, "&c你不能修改方块的 ID!");
+                    ChatUtils.sendMessage(player, "&cYou cannot modify the block ID!");
                     return;
                 }
 
                 String value = args[3];
 
                 blockData.setData(key, value);
-                ChatUtils.sendMessage(player, "&a已设置该方块 &b%key% &a的值为: &e%value%", msg -> msg.replace("%key%", key)
+                ChatUtils.sendMessage(player, "&aSet the value of &b%key% &afor this block to: &e%value%", msg -> msg.replace("%key%", key)
                         .replace("%value%", value));
             }
             case "remove" -> {
                 if (key.equalsIgnoreCase("id")) {
-                    ChatUtils.sendMessage(player, "&c你不能修改方块的 ID!");
+                    ChatUtils.sendMessage(player, "&cYou cannot modify the block ID!");
                     return;
                 }
 
                 blockData.removeData(key);
-                ChatUtils.sendMessage(player, "&a已移除该方块 &b%key% &a的值", msg -> msg.replace("%key%", key));
+                ChatUtils.sendMessage(player, "&aRemoved the value of &b%key% &afor this block", msg -> msg.replace("%key%", key));
             }
             default -> {
                 Slimefun.getLocalization()

@@ -183,7 +183,7 @@ class VersionsCommand extends SubCommand {
 
                 } else {
                     Component hoverComp = Component.text()
-                            .append(Component.text("作者: ", NamedTextColor.YELLOW))
+                            .append(Component.text("Author: ", NamedTextColor.YELLOW))
                             .append(Component.text(authors, NamedTextColor.YELLOW))
                             .build();
 
