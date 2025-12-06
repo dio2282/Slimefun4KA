@@ -8,7 +8,7 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.OfflinePlayer;
 
 /**
- * Vault 集成类, 用于处理游戏币相关的操作.
+ * Vault integration class for handling economy-related operations.
  *
  * @author StarWishsama
  */
@@ -20,12 +20,12 @@ public class VaultIntegration {
             var rsp = plugin.getServer().getServicesManager().getRegistration(Economy.class);
             if (rsp != null) {
                 econ = rsp.getProvider();
-                plugin.getLogger().log(Level.INFO, "成功接入 Vault");
+                plugin.getLogger().log(Level.INFO, "Successfully connected to Vault");
             } else {
-                plugin.getLogger().log(Level.WARNING, "无法接入 Vault. 如果你是 CMI 用户, 请至配置文件启用经济系统");
+                plugin.getLogger().log(Level.WARNING, "Unable to connect to Vault. If you are a CMI user, please enable the economy system in the config file");
             }
         } else {
-            plugin.getLogger().log(Level.WARNING, "服务端未安装 Vault, 游戏币解锁研究特性将无法使用");
+            plugin.getLogger().log(Level.WARNING, "Vault is not installed on the server, the money unlock research feature will be unavailable");
         }
     }
 

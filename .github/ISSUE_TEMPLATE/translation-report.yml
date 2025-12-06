@@ -1,33 +1,33 @@
-name: 汉化反馈
-description: 反馈 Slimefun 4 汉化版的汉化问题
+name: Translation Report
+description: Report translation issues in Slimefun 4 Chinese Version
 labels:
-- "📜 Translation | 汉化问题"
+- "📜 Translation | Translation Issue"
 
 body:
 - type: markdown
   attributes:
     value: |
-      感谢你使用 Slimefun 问题反馈系统！
+      Thank you for using the Slimefun issue reporting system!
       
-      在反馈前, 请确认
-      - 你已经查看 [最新版本](https://github.com/SlimefunGuguProject/Slimefun4/releases) 是否已修复你所遇到的问题
-      - 你已经搜索了已有的 [问题](https://github.com/SlimefunGuguProject/Slimefun4/issues) 是否发现了相似的问题
+      Before reporting, please confirm:
+      - You have checked the [latest version](https://github.com/SlimefunGuguProject/Slimefun4/releases) to see if the issue you encountered has been fixed
+      - You have searched existing [issues](https://github.com/SlimefunGuguProject/Slimefun4/issues) to see if similar issues have been found
       
-      如果你的反馈含糊不清或不符合模板，将会被我们直接关闭。
+      If your report is vague or does not conform to the template, it will be closed directly by us.
 
 - type: textarea
   id: issue-description
   attributes:
-    label: 汉化问题描述
-    description: 在此详细描述你遇到的问题
+    label: Translation Issue Description
+    description: Please describe the issue you encountered in detail here
   validations:
     required: true
 
 - type: textarea
   id: reproduce
   attributes:
-    label: 汉化错误/缺失的位置
-    description: 在这里简略说明汉化错误/缺失的位置
+    label: Translation Error/Missing Location
+    description: Briefly explain the location of the translation error/missing translation here
   validations:
     required: true
 
@@ -36,14 +36,14 @@ body:
   validations:
     required: true
   attributes:
-    label: Slimefun 版本
+    label: Slimefun Version
     description: |
-      **不要填写 "最新版本"，否则你的反馈会被立即关闭**
-      请你截图或复制执行命令 "/sf versions" 后的输出内容。
+      **Do not fill in "latest version", otherwise your report will be closed immediately**
+      Please screenshot or copy the output after executing the command "/sf versions".
     placeholder: Slimefun 2025.1
 
 - type: textarea
   id: additional
   attributes:
-    label: 补充信息
-    description: 如有必要，你可以在下文继续添加其他信息
+    label: Additional Information
+    description: If necessary, you can add other information below
