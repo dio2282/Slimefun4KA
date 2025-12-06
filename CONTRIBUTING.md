@@ -1,43 +1,43 @@
-# 贡献指南
+# Contributing Guide
 
-在对 Slimefun 汉化版进行代码前，必须先阅读此贡献指南。
+Before contributing code to Slimefun Chinese Version, you must read this contributing guide first.
 
-# 设置环境
+# Setting Up Environment
 
-我们提供了一个自动化格式检查系统，请使用 `mvn install` 进行初始化。
+We provide an automated format checking system. Please use `mvn install` for initialization.
 
-本项目已经提供 `.editorconfig` 用于控制代码样式。如果你有自己的代码样式风格，请在对本仓库进行贡献前切换为当前仓库的风格配置。
+This project already provides `.editorconfig` for controlling code style. If you have your own code style preferences, please switch to the current repository's style configuration before contributing to this repository.
 
-# 提交信息规范
+# Commit Message Standards
 
-本项目**强制使用** [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/) 的提交信息规范。
+This project **mandatorily uses** the [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) commit message standard.
 
-> 简单来说, 你的提交信息需要包含以下内容:
+> Simply put, your commit message needs to include the following:
 > 
-> <类型>[可选 范围]: <描述>
+> <type>[optional scope]: <description>
 > 
-> 例如一个添加了新功能的提交应为 feat(item): add new item to Slimefun
+> For example, a commit that adds a new feature should be: feat(item): add new item to Slimefun
 
-如果你提交的代码中解决或处理了 Issue 中的问题，请你在主提交消息外显式声明。
+If your submitted code resolves or handles issues in Issues, please explicitly declare this outside the main commit message.
 
-> 如 resolves #114514, fix #114514 等
+> Such as resolves #114514, fix #114514, etc.
 
-如果是修复请在主提交消息上声明，不必重复声明。
+If it's a fix, please declare it in the main commit message, no need to repeat the declaration.
 
-我们支持的类型前缀正则如下：`(feat(ure)?|fix|docs|style|refactor|ci|chore|perf|build|test|revert|trans)`
+The type prefixes we support are as follows: `(feat(ure)?|fix|docs|style|refactor|ci|chore|perf|build|test|revert|trans)`
 
-另外的, 如果是与翻译相关的提交，类型应为 trans。
+Additionally, if it's a translation-related commit, the type should be trans.
 
-# 代码规范
+# Code Standards
 
-**!! 本项目使用 4 空格缩进 !!**
+**!! This project uses 4-space indentation !!**
 
-请不要过度缩减代码长度, 空格少了 Slimefun 也不会因此跑得更快.
+Please do not excessively reduce code length. Slimefun won't run faster just because there are fewer spaces.
 
-我们使用了 Spotless 作为代码格式化工具，在提交前你**必须**使用 `mvn spotless:check spotless:apply` 来自动格式化你的代码，否则将会被格式检查器拦截 PR。
+We use Spotless as the code formatting tool. Before committing, you **must** use `mvn spotless:check spotless:apply` to automatically format your code, otherwise it will be blocked by the format checker in PR.
 
-# 提交代码类型
+# Types of Code Submissions
 
-你提交的代码可以是修复、新增内容和 API。
+Your submitted code can be fixes, new content, and APIs.
 
-下游代码现在支持提交 API 相关代码，开发者们可以通过 jitpack 依赖汉化版的 Slimefun。
+Downstream code now supports submitting API-related code. Developers can depend on the Chinese version of Slimefun through jitpack.
