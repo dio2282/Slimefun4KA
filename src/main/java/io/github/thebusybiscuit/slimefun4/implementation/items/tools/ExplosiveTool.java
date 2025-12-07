@@ -111,9 +111,9 @@ public class ExplosiveTool extends SimpleSlimefunItem<ToolUseHandler> implements
         Bukkit.getServer().getPluginManager().callEvent(event);
 
         /*
-         * 修复: https://github.com/SlimefunGuguProject/Slimefun4/issues/853
+         * Fix: https://github.com/SlimefunGuguProject/Slimefun4/issues/853
          *
-         * 为了修复该问题应该对该列表进行排序，确保头颅先被处理，具体为什么可以看下方 breakBlock 方法。
+         * To fix this issue, the list should be sorted to ensure heads are processed first. See the breakBlock method below for details.
          */
         if (Bukkit.getPluginManager().isPluginEnabled("ExoticGarden")) {
             blocksToDestroy.sort((block1, block2) -> Boolean.compare(
@@ -180,13 +180,14 @@ public class ExplosiveTool extends SimpleSlimefunItem<ToolUseHandler> implements
         blockItem.ifPresentOrElse(
                 sfItem -> {
                     /*
-                     * 修复: https://github.com/SlimefunGuguProject/Slimefun4/issues/853
+                     * Fix: https://github.com/SlimefunGuguProject/Slimefun4/issues/853
                      *
-                     * 该问题源于 ExoticGarden MagicalEssence/ExoticGardenFruit useVanillaBlockBreaking 为 true，
-                     * 将调用 breakNaturally 方法而非将其作为 SlimefunItem 进行处理。
+                     * This issue originates from ExoticGarden MagicalEssence/ExoticGardenFruit having useVanillaBlockBreaking set to true,
+                     * which will call breakNaturally instead of processing it as a SlimefunItem.
                      *
-                     * 此前将 blocks 进行排序，以确保头颅为最先处理的对象，检查头颅的 Y - 1 方块是否为叶子，
-                     * 若为叶子则尝试获取该处的 SlimefunItem，若能获取得到则此处应为异域花园植物，将叶子处直接设置为 AIR 并移除该处 Slimefun 方块数据。
+                     * Previously, blocks were sorted to ensure heads are processed first. Check if the block at Y - 1 of the head is a leaf,
+                     * if it is a leaf, try to get the SlimefunItem at that location. If found, it should be an ExoticGarden plant,
+                     * set the leaf location directly to AIR and remove the Slimefun block data at that location.
                      */
                     if (Bukkit.getPluginManager().isPluginEnabled("ExoticGarden")
                             && block.getType().equals(Material.PLAYER_HEAD)) {

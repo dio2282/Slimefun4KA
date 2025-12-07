@@ -4,9 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Slimefun 数据容器的抽象类.
+ * Abstract class for Slimefun data containers.
  * <p>
- * 该类用于存储 Slimefun 特有的数据容器, 包括 Slimefun ID 和是否待删除的标志.
+ * This class is used to store Slimefun-specific data containers, including Slimefun ID and a flag indicating whether it is pending removal.
  *
  * @author NoRainCity
  *

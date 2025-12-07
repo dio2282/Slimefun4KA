@@ -269,43 +269,43 @@
                             <packages>io.github.thebusybiscuit.slimefun4.api*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - 核心类</title>
+                            <title>Slimefun4 - Core Classes</title>
                             <packages>io.github.thebusybiscuit.slimefun4.core*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - 实现类</title>
+                            <title>Slimefun4 - Implementation Classes</title>
                             <packages>io.github.thebusybiscuit.slimefun4.implementation*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - 插件兼容相关类</title>
+                            <title>Slimefun4 - Plugin Compatibility Related Classes</title>
                             <packages>io.github.thebusybiscuit.slimefun4.integrations*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - 工具类</title>
+                            <title>Slimefun4 - Utility Classes</title>
                             <packages>io.github.thebusybiscuit.slimefun4.utils*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - 物品</title>
+                            <title>Slimefun4 - Items</title>
                             <packages>io.github.thebusybiscuit.slimefun4.implementation.items*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - 多方块结构</title>
+                            <title>Slimefun4 - Multiblock Structures</title>
                             <packages>io.github.thebusybiscuit.slimefun4.implementation.items.multiblocks*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - 电器</title>
+                            <title>Slimefun4 - Electric Machines</title>
                             <packages>io.github.thebusybiscuit.slimefun4.implementation.items.electric*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - 过时包</title>
+                            <title>Slimefun4 - Deprecated Package</title>
                             <packages>me.mrCookieSlime.Slimefun*</packages>
                         </group>
                         <group>
-                            <title>数据库相关实现</title>
+                            <title>Database Related Implementation</title>
                             <packages>com.xzavier0722.mc.plugin.slimefun4.storage*</packages>
                         </group>
                         <group>
-                            <title>汉化版额外实现</title>
+                            <title>Localized Version Additional Implementation</title>
                             <packages>city.norain.slimefun4.api*</packages>
                         </group>
                     </groups>
@@ -313,7 +313,7 @@
             </plugin>
         </plugins>
 
-        <!-- 私有 Maven Repo 发布相关组件 -->
+        <!-- Private Maven Repo Publishing Related Components -->
 
         <resources>
             <!-- Resources we want to include, e.g. configs or language files -->
