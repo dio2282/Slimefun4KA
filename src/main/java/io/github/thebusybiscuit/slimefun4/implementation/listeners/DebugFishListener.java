@@ -120,8 +120,10 @@ public class DebugFishListener implements Listener {
                             .getUniversalDataUUID(b)
                             .ifPresentOrElse(
                                     (uuid) -> {
-                                        p.sendMessage(ChatColors.color(
-                                                "&cDetected corrupted universal data item, UUID: " + uuid + ", please check if the corresponding data exists in the database!"));
+                                        p.sendMessage(
+                                                ChatColors.color(
+                                                        "&cDetected corrupted universal data item, UUID: " + uuid
+                                                                + ", please check if the corresponding data exists in the database!"));
                                         sendVanillaInfo(p, b);
                                     },
                                     () -> sendVanillaInfo(p, b)));

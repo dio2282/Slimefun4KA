@@ -820,8 +820,9 @@ public class BlockDataController extends ADataController {
         getData(key, true).forEach(data -> chunkKeys.add(data.get(FieldKey.CHUNK)));
 
         chunkKeys.forEach(cKey -> loadChunk(LocationUtils.toChunk(world, cKey), false, true));
-        logger.log(
-                Level.INFO, "World {0} data loading completed, took {1}ms", new Object[] {worldName, (System.currentTimeMillis() - start)});
+        logger.log(Level.INFO, "World {0} data loading completed, took {1}ms", new Object[] {
+            worldName, (System.currentTimeMillis() - start)
+        });
     }
 
     public void loadUniversalRecord() {

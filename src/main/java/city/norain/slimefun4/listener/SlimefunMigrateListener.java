@@ -17,7 +17,9 @@ public class SlimefunMigrateListener implements Listener {
         if ((PlayerProfileMigrator.getInstance().hasOldData()
                         || BlockStorageMigrator.getInstance().hasOldData())
                 && p.hasPermission("slimefun.command.migrate")) {
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cDetected old data stored in files, please use /sf migrate to migrate old data to database!"));
+            p.sendMessage(ChatColor.translateAlternateColorCodes(
+                    '&',
+                    "&cDetected old data stored in files, please use /sf migrate to migrate old data to database!"));
         }
     }
 
